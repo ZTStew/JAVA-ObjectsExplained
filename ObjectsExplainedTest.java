@@ -15,7 +15,7 @@
  *    is 'package'
  * 
  * Notes:
- * Access Specifier/Modifier: Java Classes and methods start with something called an 'Access Specifier/Modifier'
+ *  Access Specifier/Modifier: Java Classes and methods start with something called an 'Access Specifier/Modifier'
  *    Information collected from: https://www.javatpoint.com/method-in-java
  *      It determines the visibility of the method.
  *      There are 4 different Access Specifiers: Public, Private, Protected, and Default
@@ -29,10 +29,12 @@
  *      Default: as you can guess, this is the value given when an access specifier is not given.
  *        classes or methods with 'default' access modifiers are only accessable within the same application/package
  *  
- * Return Type: The data type that the method returns. You can also view it as the data type that is given to the 'return' in a method
+ *  Return Type: The data type that the method returns. You can also view it as the data type that is given to the 'return' in a method
  *    It may have a primitive data type, object, collection, arrays, void, etc. 
  *    If nothing is returned, use the keyword: void.
  *    Information collected from: https://www.javatpoint.com/method-in-java
+ * 
+ *  Objects:
  * 
  * To Run: javac ObjectsExplainedTest.java && java ObjectsExplainedTest
 */
@@ -51,10 +53,21 @@ public class ObjectsExplainedTest {
    * static - this means that only a single copy of 'main' gets created and is then shared between all instances of a
    *    class. In this case the class is 'ObjectsExplainedTest'
    * void - a 'Return Type', in this case 'void' meaning that 'main' will return nothing when called.
-   * main - execution of a Java program starts here. There can only be 1 'main' method per application.
-   * String[] args - an argument declaration, saying that 'main' is expecting. 
+   * main - Method name, execution of a Java program starts here. There can only be 1 'main' method per application.
+   * String[] args - an argument declaration, saying what 'main' is expecting. In this case, it is expecting an array of
+   *    Strings and is naming it 'args'. 'args' is provided when you run call the program in the terminal.
+   *    For example: javac ObjectsExplainedTest.java && java ObjectsExplainedTest "this is where 'args' gets its arguments"
+   *    this allows the executing user to provide information on program execution rather than having the program prompt
+   *    the users for the information.
    */
   public static void main(String[] args) {
-    System.out.println("test program");
+    /* Tests to make sure program runs */
+    // System.out.println("test program");
+    /* Tests 'args' */
+    // System.out.println(args[0]);
+
+    /* 
+     * Objects can be likened to a blue print
+     */
   } // method main
 } // class ObjectsExplainedTest
