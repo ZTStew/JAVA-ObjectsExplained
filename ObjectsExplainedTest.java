@@ -8,6 +8,7 @@
  *  https://www.javatpoint.com/method-in-java
  *  https://www.javatpoint.com/java-data-types
  *  https://www.javatpoint.com/difference-between-object-and-class
+ *  https://www.geeksforgeeks.org/difference-between-abstract-class-and-interface-in-java/
  * 
  * Definitions:
  *  application/package/project - refers to a folder containing a program in Java for example: 'ObjectsExplained' would
@@ -35,6 +36,10 @@
  *    Information collected from: https://www.javatpoint.com/method-in-java
  * 
  *  Objects:
+ *    There are 3 main types of objects in Java: class, interface, abstract
+ *      1) Class: the standard object you see in programming
+ *      2) Interface:
+ *      3) Abstract:
  * 
  * To Run: javac ObjectsExplainedTest.java && java ObjectsExplainedTest
 */
@@ -67,7 +72,26 @@ public class ObjectsExplainedTest {
     // System.out.println(args[0]);
 
     /* 
-     * Objects can be likened to a blue print
+     * To demonstrate the need for Objects and how they are used, let us make a Zoo that holds multiple exotic creatures
+     *  each creature which is able to preform activities like, walk around, eat, drink, act board
+     * If we were to try to represent an animal like this with out objects it would end up looking something like this:
      */
+
+    String creature_species = "Giant Moon Eating Lobster-Cat";
+    String creature_name = "Rudof The Clipper Of Nails";
+    int creature_age = 13;
+    String creature_color = "#397889";
+    float creature_speed = 45.783f;
+    int creature_arms = 4;
+    int creature_legs = 3;
+    String creature_environment = "amphibious";
+    float creature_location_x = 257;
+    float creature_location_y = 388;
+
+    System.out.printf("creature_species = %s\ncreature_name = %s\ncreature_age = %d\ncreature_color = %s\ncreature_speed = %f\ncreature_arms = %d\ncreature_legs = %d\ncreature_environment = %s\ncreature_location_x = %f\ncreature_location_y = %f", creature_species, creature_name, creature_age, creature_color, creature_speed, creature_arms, creature_legs, creature_environment, creature_location_x, creature_location_y);
+
+    /* Now we have a creature that we have made and it has various attributes and we can now modify it in various ways for example: */
+    // creature_location_x += creature_speed;
+
   } // method main
 } // class ObjectsExplainedTest
