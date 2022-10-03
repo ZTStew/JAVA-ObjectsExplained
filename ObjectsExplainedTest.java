@@ -71,6 +71,13 @@ public class ObjectsExplainedTest {
     /* Reads the first string in 'args' */
     // System.out.println(args[0]);
 
+    Giant_Moon_Eating_Lobster_Cat Creature1 = new Giant_Moon_Eating_Lobster_Cat();
+
+    /*
+     * A method cannot be placed inside of another method. Because 'main' is a method, any methods we make must be created
+     * outside 'main'
+     */
+
     /*
      * To demonstrate the need for Objects and how they are used, let us make a Zoo that holds multiple exotic creatures
      *  each creature which is able to preform activities like, walk around, eat, drink, act board
@@ -78,31 +85,8 @@ public class ObjectsExplainedTest {
      */
 
     /* As this data applies to the creature we can call these variables the creature's "attributes" */
-    /* attributes */
-    public static String creature_species = "Giant Moon Eating Lobster-Cat";
-    public static String creature_name = "Rudof The Clipper Of Nails";
-    public static int creature_age = 13;
-    public static String creature_color = "#397889";
-    public static float creature_speed = 45.783f;
-    public static int creature_arms = 4;
-    public static int creature_legs = 3;
-    public static String creature_environment = "amphibious";
-    public static String creature_movement_method = "legs";
-    public static float creature_location_x = 257;
-    public static float creature_location_y = 388;
-    /* attributes */
 
 
-    /* Let's look at how we might view or modify the creature's data */
-
-    /* We could view single pieces of data as we normally would with this: */
-    System.out.println(creature_location_x);
-    /* We could change a single piece of data as we normally would with this: */
-    creature_location_x += 5;
-    System.out.println(creature_location_x);
-
-    /* We can view the variable data by doing this: */
-    System.out.printf("creature_species = %s\ncreature_name = %s\ncreature_age = %d\ncreature_color = %s\ncreature_speed = %f\ncreature_arms = %d\ncreature_legs = %d\ncreature_environment = %s\ncreature_location_x = %f\ncreature_location_y = %f", creature_species, creature_name, creature_age, creature_color, creature_speed, creature_arms, creature_legs, creature_environment, creature_location_x, creature_location_y);
     /*
     * Once again, this works fine if we are dealing with a single creature, but once there are more then 1 we will end
     * up duplicating a lot of code. And there's the catch, 'dublicating code', whenever this happens, it means that we
@@ -110,15 +94,14 @@ public class ObjectsExplainedTest {
     */
 
     /*
-     * When we look at what each method will do, we can generalize them into 2 main types,
-     * methods that get data about the creature
-     * methods that set creature data
-     *
-     * So we will name them as such, Getters and Setters
-     */
+    * When we look at what each method will do, we can generalize them into 2 main types,
+    * methods that get data about the creature
+    * methods that set creature data
+    *
+    * So we will name them as such, Getters and Setters
+    */
 
 
-    System.out.println(getCreatureLocationX());
 
 
 
@@ -136,7 +119,4 @@ public class ObjectsExplainedTest {
     // creature_location_x += creature_speed;
 
   } // method main
-  static float getCreatureLocationX(){
-    return creature_location_x;
-  }
 } // class ObjectsExplainedTest
