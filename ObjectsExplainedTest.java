@@ -3,6 +3,12 @@
  *
  * Description: Program is intended to try and explain different aspects of Objects
  *
+ * Program Requirements:
+ * In order to help demonstrate the need for Objects and how they are used, make a Zoo that holds multiple exotic creatures
+ * each creature which is able to preform activities like, walk around, eat, drink, act board, as well as tell you its stats
+ * Considerations need to be made for cases where there are multiple different creatures, creatures of the same type and
+ * creatures with similar or identical attributes.
+ *
  * Useful Resources:
  *  https://www.javatpoint.com/structure-of-java-program
  *  https://www.javatpoint.com/method-in-java
@@ -65,45 +71,40 @@ public class ObjectsExplainedTest {
    *    this allows the executing user to provide information on program execution rather than having the program prompt
    *    the users for the information.
    */
+
   public static void main(String[] args) {
     /* Tests to make sure program runs */
     // System.out.println("test program");
     /* Reads the first string in 'args' */
     // System.out.println(args[0]);
-
-    Giant_Moon_Eating_Lobster_Cat Creature1 = new Giant_Moon_Eating_Lobster_Cat();
+    System.out.println(test_var);
 
     /*
-     * A method cannot be placed inside of another method. Because 'main' is a method, any methods we make must be created
-     * outside 'main'
+     * Java is designed in a way that makes it so 1 file can contain 1 class.
+     * Additionally, a method cannot be placed inside of another method. Because 'main' is a method, any methods we make
+     * must be created outside 'main'
      */
 
     /*
-     * To demonstrate the need for Objects and how they are used, let us make a Zoo that holds multiple exotic creatures
+     * To help demonstrate the need for Objects and how they are used, let us make a Zoo that holds multiple exotic creatures
      *  each creature which is able to preform activities like, walk around, eat, drink, act board
      * If we were to try to represent an animal like this without objects, it would end up looking something like this:
      */
 
     /* As this data applies to the creature we can call these variables the creature's "attributes" */
-
-
-    /*
-    * Once again, this works fine if we are dealing with a single creature, but once there are more then 1 we will end
-    * up duplicating a lot of code. And there's the catch, 'dublicating code', whenever this happens, it means that we
-    * should use a function/method in order to reduce the amount of code that is duplicated.
-    */
-
-    /*
-    * When we look at what each method will do, we can generalize them into 2 main types,
-    * methods that get data about the creature
-    * methods that set creature data
-    *
-    * So we will name them as such, Getters and Setters
-    */
-
-
-
-
+    /* attributes */
+    String creature_species = "Giant Moon Eating Lobster-Cat";
+    String creature_name = "Rudof The Clipper Of Nails";
+    int creature_age = 13;
+    String creature_color = "#397889";
+    float creature_speed = 45.783f;
+    int creature_arms = 4;
+    int creature_legs = 3;
+    String creature_environment = "amphibious";
+    String creature_movement_method = "legs";
+    float creature_location_x = 257;
+    float creature_location_y = 388;
+    /* attributes */
 
     /*
     * This works fine if we have 1 creature, but what happens if there are multiple creatures? We could take on a naming
@@ -111,12 +112,48 @@ public class ObjectsExplainedTest {
     * but what happens if there are multiples of that species? We could try something like: [species]_[attribute]_[name]
     * As you can see, in order to handle multiple attribute sets, we have to make the names of the set increasingly more
     * specific and it doesn't account for what would happen if there are 2 sets that contain identical information.
-    * Lastly, there is no way to itterativly declare a variable
+    * Lastly, there is no way to itterativly declare variables so we would be stuck hard coding every single creature we
+    * add to the zoo.
+    */
+
+    /*
+     * Before worrying about creating multiple creatures, let's look at the other requirement:
+     * "each creature which is able to preform activities like, walk around, eat, drink, act board, as well as tell you its stats"
+     */
+
+    /* If we only want to see 1 piece of data, we could view it normally like this: */
+    System.out.println(creature_location_x);
+    /* We can also change a single piece of data as we normally would with this: */
+    creature_location_x += creature_speed;
+    System.out.println(creature_location_x);
+
+    /* And we can view all the creature's data by doing this: */
+    System.out.printf("creature_species = %s\ncreature_name = %s\ncreature_age = %d\ncreature_color = %s\ncreature_speed = %f\ncreature_arms = %d\ncreature_legs = %d\ncreature_environment = %s\ncreature_movement_method = %s\ncreature_location_x = %f\ncreature_location_y = %f", creature_species, creature_name, creature_age, creature_color, creature_speed, creature_arms, creature_legs, creature_environment, creature_movement_method, creature_location_x, creature_location_y);
+
+   /*
+    * This works fine if there is a single creature we are keeping track of, but once there are multiple, things
+    * start falling appart rather quickly because of variable names and everything needing to be hard coded.
+    * What's more, it took me several minutes to write up that, "print all the creature's data" line and if it were to
+    * be used multiple times, you could see how that would get rather old rather quickly.
+    *
+    * Lucky for us, there is a way to cut down on duplicate code, functions/methods.
+    * Unfortunately, a method cannot be created inside another method in Java and 'main' is a method.
+    * We could define a method outside of the 'main' method, but then it will not be able to access the creature data
+    * because of scope. We could then also move the data outside of 'main', but variables defined outside of main and
+    * inside the class must be static meaning we are restricted in what we can do.
+    *
+    *
+    * Looking at this problem, there are 3 main issues:
+    * 1) variable naming when there are mutliple creatures
+    * 2) defining variables somewhere accessable
+    * 3) duplicated code that should be stored in a function/method
     */
 
 
-    /* Now we have a creature that we have made and it has various attributes and we can now modify it in various ways for example: */
-    // creature_location_x += creature_speed;
-
+    /*
+     * There is thankfully a solution for all of these issues, objects.
+     *
+     */
+    Giant_Moon_Eating_Lobster_Cat Creature1 = new Giant_Moon_Eating_Lobster_Cat();
   } // method main
 } // class ObjectsExplainedTest
