@@ -77,7 +77,6 @@ public class ObjectsExplainedTest {
     // System.out.println("test program");
     /* Reads the first string in 'args' */
     // System.out.println(args[0]);
-    System.out.println(test_var);
 
     /*
      * Java is designed in a way that makes it so 1 file can contain 1 class.
@@ -155,6 +154,10 @@ public class ObjectsExplainedTest {
      *
      */
     Giant_Moon_Eating_Lobster_Cat Creature1 = new Giant_Moon_Eating_Lobster_Cat();
+
+    // the .toString method is a method that all objects have access to and print out
+    Creature1.toString();
+
   } // method main
 } // class ObjectsExplainedTest
 

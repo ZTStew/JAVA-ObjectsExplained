@@ -1,4 +1,4 @@
-public class Giant_Moon_Eating_Lobster_Cat {
+public class Giant_Moon_Eating_Lobster_Cat extends AbstractLivingCreature {
   /* attributes */
   String creature_species = "Giant Moon Eating Lobster-Cat";
   String creature_name = "Rudof The Clipper Of Nails";
@@ -12,6 +12,12 @@ public class Giant_Moon_Eating_Lobster_Cat {
   float creature_location_x = 257;
   float creature_location_y = 388;
   /* attributes */
+
+  /* methods */
+  // @Override
+  // public String toString() {
+  //   return "Creature Species: " + this.creature_species;
+  // }
 
   /* Let's look at how we might view or modify the creature's data */
 
